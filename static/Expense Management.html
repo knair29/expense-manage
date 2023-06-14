@@ -1,0 +1,70 @@
+
+<!-- saved from url=(0022)http://127.0.0.1:5000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Expense Management</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./Expense Management_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        #img_expe{
+            height:200px;
+            width:100%;
+            object-fit:fill;
+        }
+        td{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" class="container">
+        <h1 style="color:rgb(110,110,110)">Expense Management</h1>
+        <img id="img_expe" class="img" src="./Expense Management_files/expenses-new3.png">
+       
+        <div id="search-container">
+            <h3 style="color:rgb(110,110,110)">Search Expenses</h3>
+            <div class="row">
+                <div class="col-md-9">
+                    <input type="text" class="form-control" placeholder="Search Expense">
+                </div>
+                
+                <div class="col-md-3">
+                    <button class="btn btn-outline-secondary">Search</button>
+                </div>
+            </div>  
+        </div>
+        <h3 style="color:rgb(110,110,110)">Expense List</h3>
+        <table class="table table-hover">
+            <tbody><tr>
+                <th scope="col" style="color:rgb(110,110,110)">Type</th>
+                <th scope="col" style="color:rgb(110,110,110)">Amount</th>
+                <th scope="col" style="color:rgb(110,110,110)">Date</th>
+                <th scope="col"></th>
+            </tr>
+        
+            <tr>
+                <td>Mortgage Loan</td>
+                <td>24000 Rs</td>
+                <td>24/05/23</td>
+                <td><button class="btn btn-outline-secondary">Delete</button></td>
+            </tr>
+        
+            <tr>
+                <td>Credit Card Bill</td>
+                <td>20000 Rs</td>
+                <td>29/05/23</td>
+                <td><button class="btn btn-outline-secondary">Delete</button></td>
+            </tr>
+        
+            <tr>
+                <td>Misc Expenses</td>
+                <td>15000 Rs</td>
+                <td>30/05/23</td>
+                <td><button class="btn btn-outline-secondary">Delete</button></td>
+            </tr>
+        
+    </tbody></table> 
+    </div>
+
+
+</body></html>
