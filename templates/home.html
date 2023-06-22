@@ -17,9 +17,11 @@
 </head>
 <body>
     <div id="container" class="container">
-        <h1 style="color:rgb(110,110,110)">Expense Management</h1>
+        {% include 'nav.html' %}
+        <!--<h1 style="color:rgb(110,110,110)">Expense Management</h1>-->
+        &nbsp;
         <img id="img_expe" class="img" src="http://127.0.0.1:5000/static/expenses-new3.png">
-       
+        &nbsp;
         <div id="search-container">
             <h3 style="color:rgb(110,110,110)">Search Expenses</h3>
             <div class="row">
@@ -32,23 +34,17 @@
                 </div>
             </div>  
         </div>
+        &nbsp;
         <h3 style="color:rgb(110,110,110)">Expense List</h3>
+        &nbsp;
         <table class="table table-hover">
             <tr>
-                <th scope="col" style="color:rgb(110,110,110)">Type</th>
+                <th scope="col" style="color:rgb(110,110,110);width:250px;">Type</th>
                 <th scope="col" style="color:rgb(110,110,110)">Amount</th>
                 <th scope="col" style="color:rgb(110,110,110)">Date</th>
                 <th scope="col"></th>
             </tr>
-        {% for job in jobs %}
-            <tr>
-                <td>{{job.ExpenseType}}</td>
-                <td>{{job.Amount}}</td>
-                <td>{{job.Date}}</td>
-                <td><button class="btn btn-outline-secondary">Delete</button></td>
-                <changes to be added></changes>
-            </tr>
-        {% endfor %}
+            {% include 'expenseitems.html' %}
     </table> 
     </div>
 </body>
