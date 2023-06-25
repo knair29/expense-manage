@@ -1,17 +1,10 @@
 import os
 import psycopg2
 import psycopg2.extras
-
-
+from config import db_connection
 
 def get_all_expenses():
-    conn = psycopg2.connect(
-        host="localhost",
-        database="expenses",
-        #user=os.environ['DB_USERNAME'],
-        #password=os.environ['DB_PASSWORD'])
-        user = "expense_admin",
-        password = "admin")
+    conn = db_connection()
     # Open a cursor to perform database operations
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
@@ -25,9 +18,5 @@ def get_all_expenses():
     cur.close()
     conn.close()
 
-    print(type(expenses))
     return expenses
 
-
-exp_type = get_all_expenses()
-print(exp_type)

@@ -13,11 +13,15 @@
         td{
             vertical-align: middle;
         }
+        .table-hover thead tr:hover th, .table-hover tbody tr:hover td {
+    background-color: #c4d8fd;
+}
     </style>
 </head>
 <body>
+    {% include 'nav.html' %}
     <div id="container" class="container">
-        {% include 'nav.html' %}
+        
         <!--<h1 style="color:rgb(110,110,110)">Expense Management</h1>-->
         &nbsp;
         <img id="img_expe" class="img" src="http://127.0.0.1:5000/static/expenses-new3.png">
@@ -30,7 +34,7 @@
                 </div>
                 
                 <div class="col-md-3">
-                    <button class="btn btn-outline-secondary">Search</button>
+                    <button class="btn btn-outline-primary">Search</button>
                 </div>
             </div>  
         </div>
@@ -47,6 +51,7 @@
             {% include 'expenseitems.html' %}
     </table> 
     </div>
+    {% include 'footer.html' %}
 </body>
 
 </html>
