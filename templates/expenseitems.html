@@ -1,9 +1,9 @@
 {% for expense in expenses %}
     {% set exp_amount = expense.exp_amount ~ ' ' ~ expense.exp_curr %}
         <tr>
-            <td>{{expense.exp_type}}</td>
-             <td>{{exp_amount}}</td>
-            <td>{{expense.exp_date.strftime('%d-%b-%Y')}}</td>
+            <td><a href="/expense/{{expense.exp_id}}">{{expense.exp_type}}</a></td>
+            <td><a href="/expense/{{expense.exp_id}}">{{exp_amount}} </a></td>
+            <td><a href="/expense/{{expense.exp_id}}">{{expense.exp_date.strftime('%d-%b-%Y')}}</a></td>
             <td><button class="btn btn-outline-primary">Delete</button></td>
         </tr>
  {% endfor %}

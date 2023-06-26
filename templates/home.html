@@ -5,35 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <style>
-        #img_expe{
-            height:200px;
-            width:100%;
-            object-fit:fill;
+        a{
+            text-decoration: none;
+            color:rgb(110,110,110);
         }
+        
         td{
             vertical-align: middle;
         }
-        .table-hover thead tr:hover th, .table-hover tbody tr:hover td {
-    background-color: #c4d8fd;
-}
+        .table-hover thead tr:hover th, .table-hover tbody tr:hover td
+        {
+            background-color: #d3e3f5;
+            
+        }
+
+        
     </style>
 </head>
 <body>
     {% include 'nav.html' %}
     <div id="container" class="container">
-        
-        <!--<h1 style="color:rgb(110,110,110)">Expense Management</h1>-->
-        &nbsp;
-        <img id="img_expe" class="img" src="http://127.0.0.1:5000/static/expenses-new3.png">
-        &nbsp;
         <div id="search-container">
-            <h3 style="color:rgb(110,110,110)">Search Expenses</h3>
+            <h3 style="color:rgb(110,110,110);">Search Expenses</h3>
             <div class="row">
                 <div class="col-md-9">
                     <input type="text" class="form-control" placeholder="Search Expense">
                 </div>
                 
-                <div class="col-md-3">
+                <div class="col-md-3" style="padding-left: 20px;">
                     <button class="btn btn-outline-primary">Search</button>
                 </div>
             </div>  
