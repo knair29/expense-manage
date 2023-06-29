@@ -10,7 +10,7 @@ def get_all_expenses():
 
     # Insert data into the table
 
-    cur.execute('select * from expense_list;')
+    cur.execute('select * from expense_list order by exp_id desc;')
     expense_all = cur.fetchall()
     expenses = []
     for expense in expense_all:
@@ -98,4 +98,24 @@ def load_exp_db(request):
         return 'true'
     else:
         return 'false'
+
+#search expense from db:
+def search_expense(request):
+    #get db connection
+    conn=db_connection()
+
+    # Open a cursor to perform database operations
+    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+
+    queryText = "select * from expense_list where exp_type ILIKE %s"
+    cur.execute(queryText,('%'+request+'%',))
+    res_all =  cur.fetchall()
+   
+    search_list = []
+    for res in res_all:
+        search_list.append(dict(res))
     
+    cur.close()
+    conn.close()
+    print(search_list)
+    return search_list

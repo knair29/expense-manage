@@ -38,7 +38,7 @@
     {% include 'nav.html' %}
     <br><br><br>
     <div id="container" class="container" >
-       <form action="/search">
+       <form>
             <div id="search-container">
                 <h3 style="color:rgb(110,110,110);">Search Expenses</h3>
                 <div class="row">
@@ -47,7 +47,7 @@
                     </div>
                     
                     <div class="col-md-3" style="padding-left: 20px;">
-                        <input type="submit" class="btn btn-outline-primary" value="Search"></input>
+                        <a type="submit" class="btn btn-outline-primary" href="/search">Search</a>
                         <!--<a type="submit" class="btn btn-outline-primary"  id="btn_search" href="/search">Search</a>-->
                     </div>
                 </div>  
